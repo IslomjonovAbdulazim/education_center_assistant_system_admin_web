@@ -7,8 +7,7 @@ const EditManager = ({ manager, centers, onSuccess, onCancel }) => {
   const [formData, setFormData] = useState({
     fullname: '',
     phone: '',
-    learning_center_id: '',
-    subject_field: ''
+    learning_center_id: ''
   });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -18,8 +17,7 @@ const EditManager = ({ manager, centers, onSuccess, onCancel }) => {
       setFormData({
         fullname: manager.fullname || '',
         phone: manager.phone || '',
-        learning_center_id: manager.learning_center_id || '',
-        subject_field: manager.subject_field || ''
+        learning_center_id: manager.learning_center_id || ''
       });
     }
   }, [manager]);
@@ -91,14 +89,6 @@ const EditManager = ({ manager, centers, onSuccess, onCancel }) => {
           ))}
         </select>
       </div>
-
-      <Input
-        label="Subject Field"
-        name="subject_field"
-        value={formData.subject_field}
-        onChange={handleChange}
-        placeholder="e.g., Mathematics, English, Programming"
-      />
 
       <div style={{ display: 'flex', gap: '12px', marginTop: '20px' }}>
         <Button type="submit" variant="primary" disabled={loading}>
