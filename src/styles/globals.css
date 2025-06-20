@@ -48,16 +48,26 @@ body {
 }
 
 .nav-menu a {
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   padding: 12px 16px;
   display: block;
   border-radius: 8px;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
 }
 
 .nav-menu a:hover {
   background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-left-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-menu a.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-left-color: white;
+  font-weight: 500;
 }
 
 .logout-btn {
